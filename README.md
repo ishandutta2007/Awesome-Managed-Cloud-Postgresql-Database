@@ -15,42 +15,30 @@ This repository tracks notable **SaaS platforms** and **open-source projects** f
 Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
 
 ## Table of Contents
+- [Sector Overview & Market Dynamics](#sector-overview--market-dynamics)
 - [SaaS/Hosted Platforms](#saas-hosted-platforms)
 - [Open-Source GitHub Projects](#open-source-github-projects)
 - [How to Contribute](#how-to-contribute)
 - [Disclaimer](#disclaimer)
 
+## Sector Overview & Market Dynamics
+
+The global Database-as-a-Service (DBaaS) and managed cloud database market represents an estimated **$25B–$35B** market size, expanding at a rapid ~15%–18% CAGR and projected to cross $100B+ into the 2030s. The sector is **highly concentrated at the infrastructure layer (an oligopoly of hyperscalers AWS, Microsoft Azure, and Google Cloud)**, while exhibiting **moderate fragmentation in the specialized, developer-first layer** where modern challengers (Supabase, Neon, CockroachDB, Timescale) differentiate through serverless scaling, developer experience, and AI-native workflows before frequently consolidating into larger data platforms.
+
 ## SaaS/Hosted Platforms
 
-- **[Salesforce Heroku Postgres](https://www.heroku.com/postgres)**  
-  Managed PostgreSQL service tightly integrated with Heroku PaaS, with tiered plans starting at $5/month, Dataclips, followers, and forking [citation:8][citation:12].
-
-- **[AWS RDS PostgreSQL](https://aws.amazon.com/rds/postgresql/)**  
-  Fully managed PostgreSQL with Multi-AZ high availability, read replicas, automated backups, and Performance Insights [citation:3][citation:8].
-
-- **[Supabase](https://supabase.com/)**  
-  Open-source Firebase alternative with managed PostgreSQL, real-time subscriptions, authentication, and auto-generated APIs. Free tier and $25/month Pro plan [citation:9].
-
-- **[Neon](https://neon.tech/)**  
-  Serverless PostgreSQL with separated storage and compute, instant branching, scale-to-zero, and usage-based pricing. Azure Native Integration available [citation:9][citation:19].
-
-- **[CockroachDB Cloud](https://www.cockroachlabs.com/)**  
-  Distributed SQL database with PostgreSQL compatibility, serverless and dedicated options, and multi-region survivability.
-
-- **[Timescale Cloud](https://www.timescale.com/)**  
-  Managed time-series database built on PostgreSQL with hypertables, continuous aggregates, and compression. Free tier with 750 MB storage [citation:9].
-
-- **[Google Cloud SQL for PostgreSQL](https://cloud.google.com/sql/docs/postgres)**  
-  Fully managed PostgreSQL with automated backups, replication, and integration with GCP ecosystem. Entry from $11.32/month [citation:3][citation:8].
-
-- **[Azure Database for PostgreSQL](https://azure.microsoft.com/en-us/products/postgresql/)**  
-  Fully managed, enterprise-ready PostgreSQL with built-in HA, elastic scaling, and Azure ecosystem integration [citation:1].
-
-- **[Aiven for PostgreSQL](https://aiven.io/postgresql)**  
-  Managed PostgreSQL with multi-cloud deployment, automated backups, and integration with Aiven's observability stack.
-
-- **[Tembo](https://tembo.io/)**  
-  Managed PostgreSQL platform with pre-configured stacks for specific workloads (time-series, geospatial, vector) and deployment on any cloud.
+| Platform | Company Scale (Valuation / Revenue) | Starting Tier Pricing | Free Tier / Trial Limits | Key Highlights |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Microsoft Azure (Azure Database for PostgreSQL)](https://azure.microsoft.com/en-us/products/postgresql/)** | ~$3.1T Market Cap / ~$245B+ Annual Revenue | ~$12 - $15/month (Flexible Server Burstable `Standard_B1ms` / `B1s`) | 12-month free trial: 750 hrs/month of `Standard_B1ms` (1 vCore) compute + 32 GB storage | Enterprise-grade managed PostgreSQL with built-in HA, elastic scaling, and Azure native ecosystem integration. |
+| **[Google Cloud (Cloud SQL for PostgreSQL)](https://cloud.google.com/sql/docs/postgres)** | ~$2.1T Market Cap / ~$350B+ Annual Revenue | $11.32/month (Shared-core `db-f1-micro` 1 vCPU, 0.6 GB RAM + storage) | 90-day free trial with $300 universal credits; or dedicated 30-day Cloud SQL trial instance (up to 8 vCPUs, 64 GB RAM, 100 GB storage) | Fully managed PostgreSQL with automated backups, replication, and seamless integration with GCP services. |
+| **[AWS (Amazon RDS for PostgreSQL)](https://aws.amazon.com/rds/postgresql/)** | ~$2.0T Market Cap / ~$105B+ AWS Annual Run-Rate | ~$11.68/month (`db.t4g.micro` single-AZ on-demand, ~$0.016/hr) | 12-month free trial: 750 hrs/month of `db.t2.micro`/`t3.micro`/`t4g.micro` compute + 20 GB gp2/gp3 storage + 20 GB backup storage | Industry standard for managed PostgreSQL with Multi-AZ HA, automated snapshots, and Performance Insights. |
+| **[Salesforce (Heroku Postgres)](https://www.heroku.com/postgres)** | ~$280B Market Cap / ~$38B Annual Revenue | $5/month (`Essential-0` plan) | No free tier or trial (permanent free plans discontinued in 2022; pay-as-you-go billed per-second, starting at $5/mo with 1 GB storage & 20 connections) | Managed PostgreSQL tightly integrated with Heroku PaaS, offering Dataclips, followers, and seamless app deployments. |
+| **[Supabase](https://supabase.com/)** | $10.5B Valuation / ~$170M ARR | $25/month (Pro tier) | Free forever plan: 2 free projects, 500 MB database storage, 1 GB file storage, 50,000 monthly active users, 2 GB egress (pauses after 1 week of inactivity) | Open-source Firebase alternative featuring managed PostgreSQL, Realtime engine, Auth, and auto-generated REST/GraphQL APIs. |
+| **[CockroachDB Cloud](https://www.cockroachlabs.com/)** | $5B Valuation / ~$130M - $160M ARR | $0.18/hour (~$130/month for 2 vCPU Standard provisioned) | Free forever plan (Basic tier): 50M Request Units (RUs) per month + 10 GiB storage ($15/mo recurring credit); also includes a 30-day trial with $400 credits for new orgs | Distributed SQL database offering PostgreSQL wire compatibility, multi-region survivability, and serverless scale-to-zero. |
+| **[Aiven for PostgreSQL](https://aiven.io/postgresql)** | ~$3B Valuation / ~$109M ARR | $5/month (Developer tier) | Free forever plan: 1 dedicated VM, 1 CPU, 1 GB RAM, 1 GB storage (powers down on prolonged inactivity, easily restarted) | Managed PostgreSQL with multi-cloud deployment (AWS, GCP, Azure), automated backups, and integrated observability. |
+| **[Neon](https://neon.tech/)** | ~$1B Valuation (Acquired by Databricks) / ~$25M ARR | Pay-as-you-go from $0 (Launch plan: $0.106/CU-hour + $0.35/GB-month storage, typically ~$15/mo for small apps) | Free forever plan: Up to 100 projects, 100 CU-hours/month, 1 GB storage per project (20 GB shared cap), 5 GB egress, auto-suspends after 5 min idle | Serverless PostgreSQL with separated storage and compute, instant copy-on-write branching, and sub-second scale-to-zero. |
+| **[Timescale Cloud](https://www.timescale.com/)** | >$1B Valuation / ~$180M total funding | $30/month (Performance tier starting compute + storage) | Free forever plan: 2 database services, 750 MiB storage per service (shifts to read-only when full); also offers a 30-day free trial of Performance tier without credit card | Optimized PostgreSQL for time-series, event, and analytics workloads featuring hypertables, continuous aggregates, and columnar compression. |
+| **[Tembo](https://tembo.io/)** | ~$80M Valuation / ~$21M total funding | $15/month (Starter tier) | Free forever plan (Hobby tier): 0.25 vCPU, 1 GB RAM, 10 GB storage, unlimited reads/writes, support for 200+ Postgres extensions | Managed PostgreSQL platform with pre-configured workload stacks (vector, time-series, analytics) deployable on any cloud. |
 
 ## Open-Source GitHub Projects
 
