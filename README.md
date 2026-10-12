@@ -1,6 +1,6 @@
 # Awesome-Managed-Cloud-Postgresql-Database
 
-# Top Managed Cloud PostgreSQL Database Ecosystem
+## Top Managed Cloud PostgreSQL Database Ecosystem
 
 **Curated List of SaaS Products & Open-Source GitHub Projects**  
 *Focused on Serverless Scaling, High Availability & Automated Database Operations*  
